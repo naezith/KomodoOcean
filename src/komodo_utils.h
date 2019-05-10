@@ -1070,7 +1070,7 @@ uint64_t komodo_block_prg(uint32_t nHeight)
 
 // given a block height, this returns the unlock time for that block height, derived from
 // the ASSETCHAINS_MAGIC number as well as the block height, providing different random numbers
-// for corresponding blocks across chains, but the same sequence in each chain 
+// for corresponding blocks across chains, but the same sequence in each chain
 int64_t komodo_block_unlocktime(uint32_t nHeight)
 {
     uint64_t fromTime, toTime, unlocktime;
@@ -1609,7 +1609,7 @@ uint64_t komodo_ac_block_subsidy(int nHeight)
                                 subsidyDifference = subsidy;
                             }
                             else
-                            {    
+                            {
                                 // Ex: -ac_eras=3 -ac_reward=0,384,24 -ac_end=1440,260640,0 -ac_halving=1,1440,2103840 -ac_decay 100000000,97750000,0
                                 subsidyDifference = subsidy - ASSETCHAINS_REWARD[curEra + 1];
                                 if (subsidyDifference < 0)
@@ -1687,6 +1687,15 @@ void komodo_args(char *argv0)
         }
         //KOMODO_PAX = 1;
     } //else KOMODO_PAX = GetArg("-pax",0);
+
+		// NAE Customized
+		SoftSetArg("-ac_name", std::string("NAE"));
+		SoftSetArg("-ac_supply", std::string("250000"));
+		SoftSetArg("-addnode", std::string("34.252.105.241"));
+		SoftSetArg("-addnode", std::string("34.244.194.114"));
+		SoftSetArg("-addnode", std::string("54.246.213.85"));
+		SoftSetArg("-addnode", std::string("52.211.139.22"));
+
     name = GetArg("-ac_name","");
     if ( argv0 != 0 )
     {
@@ -2068,4 +2077,3 @@ void komodo_prefetch(FILE *fp)
     }
     fseek(fp,fpos,SEEK_SET);
 }
-
