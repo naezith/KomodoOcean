@@ -1688,6 +1688,8 @@ void komodo_args(char *argv0)
         //KOMODO_PAX = 1;
     } //else KOMODO_PAX = GetArg("-pax",0);
 
+    //333777
+
     name = GetArg("-ac_name","");
     if ( argv0 != 0 )
     {
