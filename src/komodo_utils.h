@@ -1688,14 +1688,6 @@ void komodo_args(char *argv0)
         //KOMODO_PAX = 1;
     } //else KOMODO_PAX = GetArg("-pax",0);
 
-		// NAE Customized
-		SoftSetArg("-ac_name", std::string("NAE"));
-		SoftSetArg("-ac_supply", std::string("250000"));
-		SoftSetArg("-addnode", std::string("34.252.105.241"));
-		SoftSetArg("-addnode", std::string("34.244.194.114"));
-		SoftSetArg("-addnode", std::string("54.246.213.85"));
-		SoftSetArg("-addnode", std::string("52.211.139.22"));
-
     name = GetArg("-ac_name","");
     if ( argv0 != 0 )
     {
