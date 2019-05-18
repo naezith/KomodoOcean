@@ -1688,7 +1688,12 @@ void komodo_args(char *argv0)
         //KOMODO_PAX = 1;
     } //else KOMODO_PAX = GetArg("-pax",0);
 
-    //333777
+    
+    SoftSetArg("-ac_name", std::string("VALVE"));
+    SoftSetArg("-ac_supply", std::string("250000"));
+    SoftSetArg("-addnode", std::string("34.253.203.57"));
+    SoftSetArg("-addnode", std::string("54.154.206.39"));
+
 
     name = GetArg("-ac_name","");
     if ( argv0 != 0 )
